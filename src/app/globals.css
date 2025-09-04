@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+str-dms-upload::part(button) {
+  font-family: "Times New Roman";
+  width: 50px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #3490dc;
+  color: black;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+str-dms-upload::part(button):hover {
+  background-color: #66a9e1;
+  color: white;
+}
+
+str-dms-download::part(button) {
+  font-family: "Times New Roman";
+  width: 50px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #3490dc;
+  color: black;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+str-dms-download::part(button):hover {
+  background-color: #66a9e1;
+}
+
+str-dms-upload::part(button):hover {
+  background-color: #66a9e1;
+}
+
+str-dms-preview::part(button) {
+  font-family: "Times New Roman";
+  width: 50px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #3490dc;
+  color: black;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+str-dms-preview::part(button):hover {
+  background-color: #66a9e1;
+}
+
+str-dms-properties::part(button) {
+  font-family: "Times New Roman";
+  width: 50px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #fffb0f;
+  color: black;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+str-dms-properties::part(button):hover {
+  background-color: #fffd98;
+}
+
+/* //ingin berbeda warna dengan button yang sama */
+str-dms-upload[color="blue"]::part(button) {
+  background-color: #c6c8ca;
+  color: rgb(70, 67, 67);
+}
+
+str-dms-upload[color="blue"]::part(button):hover {
+  background-color: #dfe1e2;
+}
+
+str-dms-preview[color="green"]::part(button) {
+  background-color: #38a169;
+  color: white;
+}
+
+str-dms-preview[color="green"]::part(button):hover {
+  background-color: #48bb78;
+}
+
+@keyframes moving-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-moving-gradient {
+  background: linear-gradient(270deg, #2563eb, #ffffff, #2563eb);
+  background-size: 400% 400%;
+  animation: moving-gradient 6s ease infinite;
+}
