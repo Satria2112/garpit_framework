@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <Script
           type="module"
           strategy="beforeInteractive"
-          src="http://192.168.90.246:3000/build/str-dms-lib.esm.js"
+          src="http://str-dms-lib-dev.apps.ocp4dev.muf.co.id/build/str-dms-lib.esm.js"
         />
       </head>
       <body
